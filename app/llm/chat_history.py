@@ -13,7 +13,6 @@ def add_message(session_id: str, sender: str, message: str):
         return result
     except Exception as e:
         logger.error(f"Failed to add message to Supabase: {e}")
-        # Return None to allow the app to continue without DB
         return None
 
 
@@ -30,5 +29,4 @@ def get_history(session_id: str):
         return response.data
     except Exception as e:
         logger.error(f"Failed to get history from Supabase: {e}")
-        # Return empty list if DB fails
         return []

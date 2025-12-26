@@ -42,8 +42,99 @@
 
 	"contact": {
 		"phone": "+34 900 123 456",
-		"human_message": "Un recepcionista te atenderá en unos minutos"
+		"email": "info@hotelcostaazul.es",
+		"human_message": "Un recepcionista te atenderá en unos minutos",
+		"response_time": "Aprox. 5 minutos"
 	},
+
+	"address": {
+		"street": "Calle Ancha 5",
+		"city": "Cádiz",
+		"country": "ES",
+		"postal_code": "11001",
+		"lat": 36.5271,
+		"lng": -6.2886
+	},
+
+	"photos": [
+		"/ui/images/hotel_front.jpg",
+		"/ui/images/pool.jpg",
+		"/ui/images/room_suite.jpg"
+	],
+
+	"rating": {
+		"average": 4.6,
+		"reviews": [
+			{
+				"user": "María",
+				"score": 5,
+				"text": "Excelente ubicación y personal amable",
+				"date": "2025-07-12"
+			}
+		]
+	},
+
+	"policies": {
+		"cancellation": "Cancelación gratuita hasta 48 horas antes",
+		"deposit": "50% por adelantado",
+		"pets": "No se admiten mascotas",
+		"children": "Niños bienvenidos, cunas disponibles bajo petición",
+		"smoking": "Prohibido fumar en habitaciones"
+	},
+
+	"hours": {
+		"reception": "24/7",
+		"breakfast": "07:30 - 10:30",
+		"spa": "10:00 - 20:00",
+		"pool": "09:00 - 19:00"
+	},
+
+	"payment_methods": ["Visa", "Mastercard", "Cash"],
+
+	"amenities": [
+		{
+			"name": "Piscina exterior",
+			"description": "Piscina climatizada con zona de solárium"
+		},
+		{ "name": "Spa", "description": "Tratamientos y masajes bajo reserva" },
+		{ "name": "Gimnasio", "description": "Equipado con máquinas y pesas" },
+		{ "name": "Restaurante", "description": "Cocina local y mariscos frescos" }
+	],
+
+	"accessibility": {
+		"ramp": true,
+		"elevator": true,
+		"accessible_rooms": true,
+		"service_animals": true
+	},
+
+	"transport": {
+		"airport_shuttle": "Disponible bajo petición (coste adicional)",
+		"nearest_station": "Estación de Cádiz - 1.2 km",
+		"public_transport": "Líneas de autobús cercanas"
+	},
+
+	"languages_spoken": ["Español", "Inglés", "Francés"],
+
+	"special_offers": [
+		{
+			"title": "Descuento de verano",
+			"description": "10% de descuento en estancias de 5+ noches",
+			"valid_until": "2026-09-01"
+		}
+	],
+
+	"faqs": [
+		{
+			"q": "¿Hay parking?",
+			"a": "Sí, privado 10€/día. Reserva previa recomendada."
+		},
+		{
+			"q": "¿Ofrecen traslado al aeropuerto?",
+			"a": "Sí, con coste adicional; solicitar en recepción."
+		}
+	],
+
 	"general_activities": {
 		"rainy_day": [
 			"Museo local",

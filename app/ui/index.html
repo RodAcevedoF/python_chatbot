@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hotel Costa Azul – Chatbot</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="chat-container">
+			<header class="chat-header">
+				<div class="hotel-icon">🏨</div>
+				<div class="header-content">
+					<h1>Hotel Costa Azul</h1>
+					<p class="subtitle">Asistente Virtual - Costy</p>
+				</div>
+				<div class="status-indicator">
+					<span class="status-dot"></span>
+					<span class="status-text">En línea</span>
+				</div>
+			</header>
+
+			<div id="messages" class="chat-messages"></div>
+
+			<div id="typing-indicator" class="typing-indicator" style="display: none">
+				<div class="typing-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<!-- Hotel Info Panel -->
+			<div class="info-panel">
+				<button class="info-toggle" id="info-toggle" onclick="toggleInfo()">
+					<span class="info-toggle-icon">ℹ️</span>
+					<span class="info-toggle-text">Información del Hotel</span>
+					<span class="info-toggle-arrow" id="info-arrow">▼</span>
+				</button>
+
+				<div class="info-content" id="info-content" style="display: none">
+					<div class="info-loading" id="info-loading">
+						Cargando información...
+					</div>
+					<div class="info-data" id="info-data" style="display: none"></div>
+				</div>
+			</div>
+
+			<div class="chat-chips">
+				<button class="chip-button" onclick="sendQuick('Servicios del hotel')">
+					<span class="chip-icon">🏊</span>
+					Servicios
+				</button>
+				<button class="chip-button" onclick="sendQuick('Habitaciones')">
+					<span class="chip-icon">🛏️</span>
+					Habitaciones
+				</button>
+				<button class="chip-button" onclick="sendQuick('Recomendaciones')">
+					<span class="chip-icon">⭐</span>
+					Recomendaciones
+				</button>
+				<button class="chip-button" onclick="sendQuick('Hablar con recepción')">
+					<span class="chip-icon">📞</span>
+					Recepción
+				</button>
+			</div>
+
+			<div class="chat-input">
+				<input
+					id="input"
+					placeholder="Escribe tu mensaje..."
+					aria-label="Escribe tu mensaje"
+					autocomplete="off" />
+				<button
+					id="send-button"
+					onclick="sendMessage()"
+					aria-label="Enviar mensaje">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2">
+						<path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

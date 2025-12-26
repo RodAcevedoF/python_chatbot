@@ -30,5 +30,4 @@ def get_history(session_id: str):
         return response.data
     except Exception as e:
         logger.error(f"Failed to get history from Supabase: {e}")
-        # Return empty list if DB fails
         return []

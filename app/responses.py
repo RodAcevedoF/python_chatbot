@@ -10,20 +10,52 @@ def greeting_response():
 
 def horarios_response():
     h = hotel_info["hotel"]
-    return (
+    hours = hotel_info.get("hours", {})
+    response = (
         f"📅 Check-in: desde las {h['checkin']}\n"
-        f"📅 Check-out: hasta las {h['checkout']}\n"
-        f"🍳 Desayuno: {h['breakfast']}"
+        f"📅 Check-out: hasta las {h['checkout']}\n\n"
+        f"🍳 Desayuno: {h['breakfast']}\n"
     )
+    
+    if hours:
+        response += "\n🕐 Horarios de servicios:\n"
+        if "spa" in hours:
+            response += f"• Spa: {hours['spa']}\n"
+        if "pool" in hours:
+            response += f"• Piscina: {hours['pool']}\n"
+        if "reception" in hours:
+            response += f"• Recepción: {hours['reception']}\n"
+    
+    return response
 
 def servicios_response():
     services = "\n".join(f"✔️ {s}" for s in hotel_info["services"])
-    return (
+    response = (
         "Nuestros servicios principales:\n"
         f"{services}\n\n"
         f"📶 Wifi: {hotel_info['hotel']['wifi']}\n"
-        f"🚗 Parking: {hotel_info['hotel']['parking']}"
+        f"🚗 Parking: {hotel_info['hotel']['parking']}\n"
     )
+    
+    # Add detailed amenities if available
+    amenities = hotel_info.get("amenities", [])
+    if amenities:
+        response += "\n🏊 Detalles de nuestros servicios:\n"
+        for amenity in amenities:
+            response += f"• {amenity['name']}: {amenity.get('description', '')}\n"
+    
+    # Add accessibility info
+    accessibility = hotel_info.get("accessibility", {})
+    if accessibility:
+        response += "\n♿ Accesibilidad:\n"
+        if accessibility.get('elevator'):
+            response += "• Ascensor disponible\n"
+        if accessibility.get('accessible_rooms'):
+            response += "• Habitaciones adaptadas\n"
+        if accessibility.get('ramp'):
+            response += "• Rampa de acceso\n"
+    
+    return response
 
 def habitaciones_response():
     lines = []
@@ -48,11 +80,21 @@ def recomendaciones_response():
 
 def humano_response():
     contact = hotel_info["contact"]
-    return (
-        "📞 Te ponemos en contacto con recepción.\n"
-        f"Teléfono: {contact['phone']}\n"
-        f"{contact['human_message']}"
-    )
+    response = "📞 Te ponemos en contacto con recepción.\n\n"
+    
+    if "phone" in contact:
+        response += f"📱 Teléfono: {contact['phone']}\n"
+    if "email" in contact:
+        response += f"📧 Email: {contact['email']}\n"
+    
+    hours = hotel_info.get("hours", {})
+    if "reception" in hours:
+        response += f"\n🕐 Horario: {hours['reception']}\n"
+    
+    if "human_message" in contact:
+        response += f"\n{contact['human_message']}"
+    
+    return response
 
 def fallback_response():
     return (
