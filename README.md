@@ -32,7 +32,7 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file (DO NOT COMMIT) and set the required variables:
+3. Create a `.env` file and set the required variables:
 
 ```
 SUPABASE_URL=
@@ -107,7 +107,7 @@ gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT --wo
 
 ## Contributing
 
-Contributions are welcome — please open issues or PRs.
+Contributions and suggestions are always welcome — please open issues or PRs.
 
 ## License
 
@@ -151,7 +151,7 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-3. Crea un archivo `.env` (NO LO COMPARTAS) y configura las variables:
+3. Crea un archivo `.env` y configura las variables:
 
 ```
 SUPABASE_URL=
@@ -226,7 +226,7 @@ gunicorn app.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT --wo
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas — abre issues o PRs.
+Las sugerencias siempre son bienvenidas — abre issues o PRs.
 
 ## Licencia
 
