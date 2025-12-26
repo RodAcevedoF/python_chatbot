@@ -1,0 +1,12 @@
+# Robots.txt - Hotel Costa Azul Chatbot
+# Prevent search engines from indexing this chatbot
+
+User-agent: *
+Disallow: /
+Disallow: /chat
+Disallow: /hotel-info
+Disallow: /reindex
+Disallow: /ui/
+
+# Allow health check for monitoring services
+Allow: /health

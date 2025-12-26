@@ -38,6 +38,13 @@ UI_DIR = Path(__file__).parent / "ui"
 app.mount("/ui", StaticFiles(directory=str(UI_DIR), html=True), name="ui")
 
 
+@app.get("/robots.txt")
+def robots_txt():
+    """Serve robots.txt from root to prevent search engine indexing."""
+    from fastapi.responses import FileResponse
+    return FileResponse(UI_DIR / "robots.txt", media_type="text/plain")
+
+
 @app.get("/")
 @limiter.limit("30/minute")
 def root(request: Request):
