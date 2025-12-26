@@ -1,0 +1,61 @@
+{
+	"hotel": {
+		"name": "Hotel Costa Azul",
+		"checkin": "14:00",
+		"checkout": "12:00",
+		"breakfast": "07:30 - 10:30",
+		"wifi": "Gratis en todo el hotel",
+		"parking": "Privado, 10€/día",
+		"pets": "No se admiten mascotas"
+	},
+
+	"services": [
+		"Piscina exterior",
+		"Spa",
+		"Gimnasio",
+		"Restaurante",
+		"Recepción 24h"
+	],
+
+	"rooms": [
+		{
+			"type": "Estándar",
+			"capacity": 2,
+			"breakfast_included": false
+		},
+		{
+			"type": "Familiar",
+			"capacity": 4,
+			"breakfast_included": true
+		},
+		{
+			"type": "Suite",
+			"capacity": 2,
+			"breakfast_included": true
+		}
+	],
+
+	"recommendations": {
+		"places": ["Playa a 200 metros", "Paseo marítimo", "Casco antiguo"],
+		"restaurants": ["Restaurante El Puerto", "La Marina", "Tapas del Mar"]
+	},
+
+	"contact": {
+		"phone": "+34 900 123 456",
+		"human_message": "Un recepcionista te atenderá en unos minutos"
+	},
+	"general_activities": {
+		"rainy_day": [
+			"Museo local",
+			"Centro cultural",
+			"Cafeterías cercanas",
+			"Centro comercial cubierto"
+		],
+		"with_kids": [
+			"Museo interactivo",
+			"Centro de ocio infantil",
+			"Cine",
+			"Biblioteca pública"
+		]
+	}
+}
